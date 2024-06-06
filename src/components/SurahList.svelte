@@ -26,6 +26,7 @@
 		}
 		console.log('Filtered Surahs in SurahList:', filteredSurahs);
 	}
+	
 </script>
 
 <section class="hero">
