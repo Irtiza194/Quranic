@@ -29,10 +29,12 @@
 </script>
 
 <section class="hero">
-	<div class="hero-content grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+	<div class="hero-content grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
 		{#each filteredSurahs as surah}
-			<div class="card bordered shadow-lg p-4">
-				<h2 class="text-xl font-bold">
+			<div
+				class="card shadow-lg p-4 border-[1px] border-neutral-900 hover:bg-base-200 duration-300"
+			>
+				<h2 class="text-xl font-bold font-serif cursor-pointer max-md:text-base max-sm:text-sm">
 					<i class="ri-book-marked-line mr-2"></i>{surah.name_simple}
 				</h2>
 			</div>

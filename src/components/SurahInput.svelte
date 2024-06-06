@@ -7,6 +7,7 @@
 		console.log('Search query:', searchQuery);
 		dispatch('search', { query: searchQuery });
 	}
+	
 </script>
 
 <main class="hero font-serif my-10">
