@@ -92,4 +92,8 @@
 			/>
 		</div>
 	</div>
+	<p class="mt-5 text-error">
+		Please note that the themes only work for this page at the moment, we're working hard to make
+		your experience a memorable one.
+	</p>
 </div>
