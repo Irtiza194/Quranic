@@ -1,4 +1,4 @@
-<header class="navbar gap-5 px-5 py-5 bg-base-300 shadow-md fixed">
+<header class="navbar gap-5 px-5 py-5 bg-base-300 shadow-md">
 	<div class="navbar-start">
 		<h1 class="font-serif text-3xl cursor-default max-md:text-xl">Quranic</h1>
 	</div>
@@ -14,6 +14,7 @@
 			>
 				<li><a href="/"><i class="ri-question-line"></i>About Us</a></li>
 				<li><a href="/"><i class="ri-refresh-line"></i>Releases</a></li>
+				<li><a href="/"><i class="ri-settings-line"></i>Settings</a></li>
 			</ul>
 		</div>
 	</div>
