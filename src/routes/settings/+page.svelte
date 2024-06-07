@@ -33,7 +33,7 @@
 				name="theme-buttons"
 				class="btn theme-controller btn-wide hover:shadow-lg"
 				aria-label="Default"
-				value="dark"
+				value="default"
 				on:change={changeTheme}
 			/>
 		</div>
