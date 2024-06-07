@@ -117,7 +117,7 @@
 				on:change={changeTheme}
 			/>
 		</div>
-		<div class="w-fit h-fit rounded" data-theme="black">
+		<div class="w-fit h-fit rounded">
 			<input
 				type="radio"
 				name="theme-buttons"
@@ -127,7 +127,7 @@
 				on:change={changeTheme}
 			/>
 		</div>
-		<div class="w-fit h-fit rounded" data-theme="business">
+		<div class="w-fit h-fit rounded">
 			<input
 				type="radio"
 				name="theme-buttons"
@@ -137,7 +137,7 @@
 				on:change={changeTheme}
 			/>
 		</div>
-		<div class="w-fit h-fit rounded" data-theme="winter">
+		<div class="w-fit h-fit rounded">
 			<input
 				type="radio"
 				name="theme-buttons"
@@ -147,7 +147,7 @@
 				on:change={changeTheme}
 			/>
 		</div>
-		<div class="w-fit h-fit rounded" data-theme="dim">
+		<div class="w-fit h-fit rounded">
 			<input
 				type="radio"
 				name="theme-buttons"
@@ -157,7 +157,7 @@
 				on:change={changeTheme}
 			/>
 		</div>
-		<div class="w-fit h-fit rounded" data-theme="fantasy">
+		<div class="w-fit h-fit rounded">
 			<input
 				type="radio"
 				name="theme-buttons"
@@ -174,6 +174,7 @@
 				class="btn theme-controller btn-wide hover:shadow-lg"
 				aria-label="Emerald"
 				value="emerald"
+				on:change={changeTheme}
 			/>
 		</div>
 		<div class="w-fit h-fit">
@@ -183,15 +184,7 @@
 				class="btn theme-controller btn-wide hover:shadow-lg"
 				aria-label="Corporate"
 				value="corporate"
-			/>
-		</div>
-		<div class="w-fit h-fit">
-			<input
-				type="radio"
-				name="theme-buttons"
-				class="btn theme-controller btn-wide hover:shadow-lg"
-				aria-label="Synthwave"
-				value="synthwave"
+				on:change={changeTheme}
 			/>
 		</div>
 		<div class="w-fit h-fit">
@@ -201,6 +194,7 @@
 				class="btn theme-controller btn-wide hover:shadow-lg"
 				aria-label="Retro"
 				value="retro"
+				on:change={changeTheme}
 			/>
 		</div>
 		<div class="w-fit h-fit">
@@ -208,17 +202,9 @@
 				type="radio"
 				name="theme-buttons"
 				class="btn theme-controller btn-wide hover:shadow-lg"
-				aria-label="pastel"
-				value="emerald"
-			/>
-		</div>
-		<div class="w-fit h-fit">
-			<input
-				type="radio"
-				name="theme-buttons"
-				class="btn theme-controller btn-wide hover:shadow-lg"
-				aria-label="Corporate"
-				value="corporate"
+				aria-label="Pastel"
+				value="pastel"
+				on:change={changeTheme}
 			/>
 		</div>
 	</div>
@@ -250,8 +236,3 @@
 		</button>
 	</div>
 </div>
-<footer class="footer footer-center p-4 bg-base-300 text-base-content">
-	<aside>
-		<p>Copyright © 2024 - All right reserved by ACME Industries Ltd</p>
-	</aside>
-</footer>
