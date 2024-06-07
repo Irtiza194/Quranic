@@ -2,7 +2,7 @@
 <div class="min-h-screen hero" id="about">
 	<div class="hero-content text-center">
 		<div class="max-w-md p-3">
-			<h1 class="font text-7xl max-md:text-4xl max-sm:text-3xl">السلام عليكم</h1>
+			<h1 class="text-7xl max-md:text-4xl max-sm:text-3xl">السلام عليكم</h1>
 			<p class="mt-5">
 				Quranic is a website, it aims to make it easy for anyone to read, study, and learn the
 				Quran.
