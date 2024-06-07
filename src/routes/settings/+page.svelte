@@ -10,85 +10,139 @@
 	<div
 		class="grid grid-cols-3 mt-5 gap-2 max-lg:grid-cols-2 max-sm:grid-cols-1 max-md:items-center"
 	>
-		<div class="w-fit h-fit rounded" data-theme="default">
+		<div class="w-fit h-fit">
 			<input
 				type="radio"
 				name="theme-buttons"
-				class="btn theme-controller btn-wide rounded hover:shadow-lg"
+				class="btn theme-controller btn-wide hover:shadow-lg"
 				aria-label="Default"
-				value="default"
+				value="dark"
 			/>
 		</div>
-		<div class="w-fit h-fit rounded" data-theme="light">
+		<div class="w-fit h-fit">
 			<input
 				type="radio"
 				name="theme-buttons"
-				class="btn theme-controller btn-wide rounded hover:shadow-lg"
+				class="btn theme-controller btn-wide hover:shadow-lg"
 				aria-label="Light"
 				value="light"
 			/>
 		</div>
-		<div class="w-fit h-fit rounded" data-theme="cupcake">
+		<div class="w-fit h-fit">
 			<input
 				type="radio"
 				name="theme-buttons"
-				class="btn theme-controller btn-wide rounded hover:shadow-lg"
+				class="btn theme-controller btn-wide hover:shadow-lg"
 				aria-label="CupCake"
 				value="cupcake"
 			/>
 		</div>
-		<div class="w-fit h-fit rounded" data-theme="forest">
+		<div class="w-fit h-fit">
 			<input
 				type="radio"
 				name="theme-buttons"
-				class="btn theme-controller btn-wide rounded hover:shadow-lg"
+				class="btn theme-controller btn-wide hover:shadow-lg"
 				aria-label="Forest"
 				value="forest"
 			/>
 		</div>
-		<div class="w-fit h-fit rounded" data-theme="valentine">
+		<div class="w-fit h-fit">
 			<input
 				type="radio"
 				name="theme-buttons"
-				class="btn theme-controller btn-wide rounded hover:shadow-lg"
+				class="btn theme-controller btn-wide hover:shadow-lg"
 				aria-label="Valentine"
 				value="valentine"
 			/>
 		</div>
-		<div class="w-fit h-fit rounded" data-theme="bumblebee">
+		<div class="w-fit h-fit">
 			<input
 				type="radio"
 				name="theme-buttons"
-				class="btn theme-controller btn-wide rounded hover:shadow-lg"
+				class="btn theme-controller btn-wide hover:shadow-lg"
 				aria-label="Bumblebee"
 				value="bumblebee"
 			/>
 		</div>
-		<div class="w-fit h-fit rounded" data-theme="lofi">
+		<div class="w-fit h-fit">
 			<input
 				type="radio"
 				name="theme-buttons"
-				class="btn theme-controller btn-wide rounded hover:shadow-lg"
+				class="btn theme-controller btn-wide hover:shadow-lg"
 				aria-label="Lofi"
 				value="lofi"
 			/>
 		</div>
-		<div class="w-fit h-fit rounded" data-theme="luxury">
+		<div class="w-fit h-fit">
 			<input
 				type="radio"
 				name="theme-buttons"
-				class="btn theme-controller btn-wide rounded hover:shadow-lg"
+				class="btn theme-controller btn-wide hover:shadow-lg"
 				aria-label="Luxury"
 				value="luxury"
 			/>
 		</div>
-		<div class="w-fit h-fit rounded" data-theme="wireframe">
+		<div class="w-fit h-fit">
 			<input
 				type="radio"
 				name="theme-buttons"
-				class="btn theme-controller btn-wide rounded hover:shadow-lg"
+				class="btn theme-controller btn-wide hover:shadow-lg"
 				aria-label="Wireframe"
 				value="wireframe"
+			/>
+		</div>
+		<div class="w-fit h-fit">
+			<input
+				type="radio"
+				name="theme-buttons"
+				class="btn theme-controller btn-wide hover:shadow-lg"
+				aria-label="Emerald"
+				value="emerald"
+			/>
+		</div>
+		<div class="w-fit h-fit">
+			<input
+				type="radio"
+				name="theme-buttons"
+				class="btn theme-controller btn-wide hover:shadow-lg"
+				aria-label="Corporate"
+				value="corporate"
+			/>
+		</div>
+		<div class="w-fit h-fit">
+			<input
+				type="radio"
+				name="theme-buttons"
+				class="btn theme-controller btn-wide hover:shadow-lg"
+				aria-label="Synthwave"
+				value="synthwave"
+			/>
+		</div>
+		<div class="w-fit h-fit">
+			<input
+				type="radio"
+				name="theme-buttons"
+				class="btn theme-controller btn-wide hover:shadow-lg"
+				aria-label="Retro"
+				value="retro"
+			/>
+		</div>
+		<div class="w-fit h-fit">
+			<input
+				type="radio"
+				name="theme-buttons"
+				class="btn theme-controller btn-wide hover:shadow-lg"
+				aria-label="pastel"
+				value="emerald"
+			/>
+		</div>
+		<div class="w-fit h-fit">
+			<input
+				type="radio"
+				name="theme-buttons"
+				class="btn theme-controller btn-wide hover:shadow-lg"
+				aria-label="Corporate"
+				value="corporate"
 			/>
 		</div>
 	</div>
