@@ -71,7 +71,7 @@
 			{#each filteredSurahs as surah}
 				<!-- svelte-ignore a11y-click-events-have-key-events -->
 				<div
-					class="p-4 border-[1px] text-center border-neutral-900 hover:bg-base-100 hover:shadow-lg duration-300 cursor-pointer"
+					class="p-4 border-[1px] text-center border-neutral-400 hover:bg-base-100 hover:shadow-lg duration-300 cursor-pointer"
 					on:click={() => fetchVerses(surah)}
 				>
 					<h2 class="text-lg text-center max-md:text-base max-sm:text-sm">
