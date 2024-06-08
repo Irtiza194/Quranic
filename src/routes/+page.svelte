@@ -20,6 +20,6 @@
 <SurahList {searchQuery}></SurahList>
 <About></About>
 <Releases></Releases>
-<button type="button" class="btn btn-primary ml-4 mb-4 mt-5" on:click={goToTop}>
+<button type="button" class="btn btn-primary mr-10 mb-10 float-end" on:click={goToTop}>
 	<i class="ri-arrow-up-line"></i>
 </button>

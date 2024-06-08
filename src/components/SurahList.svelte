@@ -71,28 +71,32 @@
 			{#each filteredSurahs as surah}
 				<!-- svelte-ignore a11y-click-events-have-key-events -->
 				<div
-					class="card shadow-lg p-4 border-[1px] border-neutral-900 hover:bg-base-200 duration-300 cursor-pointer"
+					class="p-4 border-[1px] text-center border-neutral-900 hover:bg-base-100 hover:shadow-lg duration-300 cursor-pointer"
 					on:click={() => fetchVerses(surah)}
 				>
-					<h2 class="text-lg surahFont max-md:text-base max-sm:text-sm">
-						<i class="ri-book-marked-line mr-2"></i>{surah.name_simple}
+					<h2 class="text-lg text-center max-md:text-base max-sm:text-sm">
+						{surah.name_simple}
 					</h2>
+					<h3 class="text-lg surahFont text-gray-600 max-md:text-base max-sm:text-sm">
+						{surah.name_arabic}
+					</h3>
 				</div>
 			{/each}
 		</div>
 	{:else}
 		<div class="mt-8">
-			<button class="btn btn-error mb-4 floating-button" on:click={goBack}>
+			<button class="btn btn-error mb-4 floating-button focus:scale-[-5em]" on:click={goBack}>
 				<i class="ri-arrow-go-back-line mr-2"></i>Go Back
 			</button>
 			<h3 class="text-2xl font-bold mb-4 px-20 surahFont max-sm:px-5">
 				{selectedSurah.name_simple} (Chapter {selectedSurah.id})
 			</h3>
+
 			<ul class="list-decimal ml-4 px-20 max-sm:px-5">
 				{#each verses as verse}
 					<li class="mb-2">
 						<p class="text-lg surahfont">{verse.arabic}</p>
-						<p class="text-md text-gray-600">{verse.english}</p>
+						<p class="text-md">{verse.english}</p>
 					</li>
 					<div class="divider"></div>
 				{/each}
