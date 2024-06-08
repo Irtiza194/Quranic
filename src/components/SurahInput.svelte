@@ -26,4 +26,3 @@
 	</div>
 </main>
 <div class="divider mx-10">Surahs</div>
-<!-- <i class="ri-search-line"></i> -->
