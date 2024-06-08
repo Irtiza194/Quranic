@@ -1,6 +1,5 @@
 <script>
 	import { onMount } from 'svelte';
-	import { afterUpdate } from 'svelte';
 
 	export let searchQuery = '';
 	let surahs = [];
@@ -60,13 +59,17 @@
 	function goBack() {
 		selectedSurah = null;
 		verses = [];
+		document.getElementById('surahList').scrollIntoView({ behavior: 'smooth' });
 	}
 </script>
 
-<section class="hero">
+<section class="hero overflow-hidden">
 	{#if !selectedSurah}
-		<div class="hero-content grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+		<div id="surahList" class="hero-content grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+			<!-- svelte-ignore a11y-click-events-have-key-events -->
 			{#each filteredSurahs as surah}
+				<!-- svelte-ignore a11y-click-events-have-key-events -->
+				<!-- svelte-ignore a11y-no-static-element-interactions -->
 				<div
 					class="p-4 border-[1px] text-center border-neutral-400 rounded hover:bg-base-100 hover:shadow-lg duration-300 cursor-pointer"
 					on:click={() => fetchVerses(surah)}
@@ -91,17 +94,18 @@
 			<h4 class="text-xl font-bold mb-4 px-20 surahFont text-gray-600 max-sm:px-5">
 				{selectedSurah.name_arabic}
 			</h4>
-			<ul class="list-decimal ml-4 px-20 max-sm:px-5">
-				{#each verses as verse}
-					<li class="mb-2">
-						<p class="text-lg surahFont">{verse.arabic}</p>
-						<p class="text-md">{verse.english}</p>
-					</li>
-					{#if verse.number !== verses[verses.length - 1].number}
-						<div class="divider"></div>
-					{/if}
-				{/each}
-			</ul>
+			<div class="surah-container">
+				<ul class="list-decimal ml-4 px-20 max-sm:px-5">
+					{#each verses as verse}
+						<li class="mb-2">
+							<p class="font text-2xl">{verse.arabic}</p>
+							<p class="mb-10">{verse.english}</p>
+							<div class="divider"></div>
+						</li>
+					{/each}
+				</ul>
+				<div class="divider"></div>
+			</div>
 		</div>
 	{/if}
 </section>
