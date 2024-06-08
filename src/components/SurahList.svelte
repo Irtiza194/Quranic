@@ -1,5 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
+	import { afterUpdate } from 'svelte';
 
 	export let searchQuery = '';
 	let surahs = [];
@@ -10,37 +11,35 @@
 	onMount(async () => {
 		try {
 			const response = await fetch('https://api.quran.com/api/v4/chapters');
-			if (!response.ok) {
-				throw new Error('Failed to fetch Surahs. Please try again later.');
-			}
 			const data = await response.json();
 			surahs = data.chapters;
 			filterSurahs();
 		} catch (error) {
-			console.error('Error fetching surah data:', error.message);
-			// You can handle the error here, e.g., display an error message to the user
+			console.error('Error fetching surah data:', error);
 		}
 	});
 
-	// Filter Surahs based on search query
-	function filterSurahs() {
-		if (!searchQuery) {
-			filteredSurahs = surahs;
-		} else {
-			const query = searchQuery.toLowerCase();
-			filteredSurahs = surahs.filter((surah) => surah.name_simple.toLowerCase().includes(query));
-		}
+	$: {
+		console.log('Received search query in SurahList:', searchQuery);
+		filterSurahs();
 	}
 
-	// Fetch verses for the selected Surah
+	function filterSurahs() {
+		if (searchQuery) {
+			filteredSurahs = surahs.filter((surah) =>
+				surah.name_simple.toLowerCase().includes(searchQuery.toLowerCase())
+			);
+		} else {
+			filteredSurahs = surahs;
+		}
+		console.log('Filtered Surahs in SurahList:', filteredSurahs);
+	}
+
 	async function fetchVerses(surah) {
 		try {
 			const response = await fetch(
 				`https://api.alquran.cloud/v1/surah/${surah.id}/editions/quran-uthmani,en.sahih`
 			);
-			if (!response.ok) {
-				throw new Error('Failed to fetch verses. Please try again later.');
-			}
 			const data = await response.json();
 			const arabicVerses = data.data[0].ayahs;
 			const englishVerses = data.data[1].ayahs;
@@ -54,23 +53,19 @@
 
 			selectedSurah = surah;
 		} catch (error) {
-			console.error('Error fetching verses:', error.message);
-			// You can handle the error here, e.g., display an error message to the user
+			console.error('Error fetching verses:', error);
 		}
 	}
 
-	// Go back to Surah list
 	function goBack() {
 		selectedSurah = null;
 		verses = [];
-		// Scroll to the Surah list
-		document.getElementById('surahList').scrollIntoView({ behavior: 'smooth' });
 	}
 </script>
 
 <section class="hero">
 	{#if !selectedSurah}
-		<div id="surahList" class="hero-content grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+		<div class="hero-content grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
 			<!-- svelte-ignore a11y-click-events-have-key-events -->
 			<!-- svelte-ignore a11y-no-static-element-interactions -->
 			{#each filteredSurahs as surah}
@@ -87,7 +82,7 @@
 		</div>
 	{:else}
 		<div class="mt-8">
-			<button class="btn btn-primary mb-4 floating-button" on:click={goBack}>
+			<button class="btn btn-secondary mb-4 floating-button" on:click={goBack}>
 				<i class="ri-arrow-go-back-line mr-2"></i>Go Back
 			</button>
 			<h3 class="text-2xl font-bold mb-4 px-20 surahFont">
