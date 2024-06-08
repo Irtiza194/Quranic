@@ -100,16 +100,6 @@
 				type="radio"
 				name="theme-buttons"
 				class="btn theme-controller btn-wide hover:shadow-lg"
-				aria-label="Luxury"
-				value="luxury"
-				on:change={changeTheme}
-			/>
-		</div>
-		<div class="w-fit h-fit">
-			<input
-				type="radio"
-				name="theme-buttons"
-				class="btn theme-controller btn-wide hover:shadow-lg"
 				aria-label="Wireframe"
 				value="wireframe"
 				on:change={changeTheme}

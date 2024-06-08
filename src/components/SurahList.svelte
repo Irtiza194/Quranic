@@ -82,18 +82,19 @@
 		</div>
 	{:else}
 		<div class="mt-8">
-			<button class="btn btn-secondary mb-4 floating-button" on:click={goBack}>
+			<button class="btn btn-error mb-4 floating-button" on:click={goBack}>
 				<i class="ri-arrow-go-back-line mr-2"></i>Go Back
 			</button>
-			<h3 class="text-2xl font-bold mb-4 px-20 surahFont">
+			<h3 class="text-2xl font-bold mb-4 px-20 surahFont max-sm:px-5">
 				{selectedSurah.name_simple} (Chapter {selectedSurah.id})
 			</h3>
-			<ul class="list-decimal ml-4 px-20">
+			<ul class="list-decimal ml-4 px-20 max-sm:px-5">
 				{#each verses as verse}
 					<li class="mb-2">
-						<p class="text-lg">{verse.arabic}</p>
+						<p class="text-lg surahfont">{verse.arabic}</p>
 						<p class="text-md text-gray-600">{verse.english}</p>
 					</li>
+					<div class="divider"></div>
 				{/each}
 			</ul>
 		</div>
