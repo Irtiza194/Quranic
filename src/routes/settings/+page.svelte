@@ -1,14 +1,12 @@
 <script>
-	import Header from '../../components/Header.svelte';
-
 	function changeTheme(event) {
 		const theme = event.target.value;
 		document.documentElement.setAttribute('data-theme', theme);
 		localStorage.setItem('selectedTheme', theme);
 	}
 
-	// Apply the stored theme on component mount
 	import { onMount } from 'svelte';
+	import SecondaryHeader from '../../components/SecondaryHeader.svelte';
 	onMount(() => {
 		const storedTheme = localStorage.getItem('selectedTheme') || 'default';
 		document.documentElement.setAttribute('data-theme', storedTheme);
@@ -19,7 +17,7 @@
 	});
 </script>
 
-<Header></Header>
+<SecondaryHeader></SecondaryHeader>
 <div class="h-fit p-5 bg-base-100">
 	<h1 class="text-7xl font-bold font-serif max-md:text-4xl max-sm:text-center">Settings</h1>
 	<div class="divider"></div>
@@ -117,51 +115,51 @@
 				on:change={changeTheme}
 			/>
 		</div>
-		<div class="w-fit h-fit rounded">
+		<div class="w-fit h-fit">
 			<input
 				type="radio"
 				name="theme-buttons"
-				class="btn theme-controller btn-wide rounded hover:shadow-lg"
+				class="btn theme-controller btn-wide hover:shadow-lg"
 				aria-label="Black"
 				value="black"
 				on:change={changeTheme}
 			/>
 		</div>
-		<div class="w-fit h-fit rounded">
+		<div class="w-fit h-fit">
 			<input
 				type="radio"
 				name="theme-buttons"
-				class="btn theme-controller btn-wide rounded hover:shadow-lg"
+				class="btn theme-controller btn-wide hover:shadow-lg"
 				aria-label="Business"
 				value="business"
 				on:change={changeTheme}
 			/>
 		</div>
-		<div class="w-fit h-fit rounded">
+		<div class="w-fit h-fit">
 			<input
 				type="radio"
 				name="theme-buttons"
-				class="btn theme-controller btn-wide rounded hover:shadow-lg"
+				class="btn theme-controller btn-wide hover:shadow-lg"
 				aria-label="Winter"
 				value="winter"
 				on:change={changeTheme}
 			/>
 		</div>
-		<div class="w-fit h-fit rounded">
+		<div class="w-fit h-fit">
 			<input
 				type="radio"
 				name="theme-buttons"
-				class="btn theme-controller btn-wide rounded hover:shadow-lg"
+				class="btn theme-controller btn-wide hover:shadow-lg"
 				aria-label="Dim"
 				value="dim"
 				on:change={changeTheme}
 			/>
 		</div>
-		<div class="w-fit h-fit rounded">
+		<div class="w-fit h-fit">
 			<input
 				type="radio"
 				name="theme-buttons"
-				class="btn theme-controller btn-wide rounded hover:shadow-lg"
+				class="btn theme-controller btn-wide hover:shadow-lg"
 				aria-label="Fantasy"
 				value="fantasy"
 				on:change={changeTheme}
@@ -225,14 +223,16 @@
 		Have you got a new idea that will help us make the journey better? What are you waiting for?
 		Tell us! We love to hear your opinion and ideas!
 	</p>
-	<div class="h-fit w-fit mt-5 mb-10 flex flex-col">
-		<label class="input input-bordered flex items-center gap-2">
-			Email
-			<input type="text" class="grow" placeholder="abc@email.com" />
-		</label>
-		<textarea class="textarea textarea-bordered mt-3" placeholder="I would like a..."></textarea>
-		<button type="button" class="btn btn-primary mt-3 hover:shadow-lg"
-			>Send<i class="ri-send-plane-2-line"></i>
-		</button>
-	</div>
+	<form action="https://formspree.io/f/mwkgdgql" method="POST">
+		<div class="h-fit w-fit mt-5 mb-10 flex flex-col">
+			<label class="input input-bordered flex items-center gap-2">
+				Email
+				<input type="email" class="grow" placeholder="abc@email.com" />
+			</label>
+			<textarea class="textarea textarea-bordered mt-3" placeholder="I would like a..."></textarea>
+			<button type="submit" class="btn btn-primary mt-3 hover:shadow-lg"
+				>Send<i class="ri-send-plane-2-line"></i>
+			</button>
+		</div>
+	</form>
 </div>
