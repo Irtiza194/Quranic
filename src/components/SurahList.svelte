@@ -35,7 +35,7 @@
 			<div
 				class="card shadow-lg p-4 border-[1px] border-neutral-900 hover:bg-base-200 duration-300"
 			>
-				<h2 class="text-xl font-bold font-serif cursor-pointer max-md:text-base max-sm:text-sm">
+				<h2 class="text-lg surahFont cursor-pointer max-md:text-base max-sm:text-sm">
 					<i class="ri-book-marked-line mr-2"></i>{surah.name_simple}
 				</h2>
 			</div>

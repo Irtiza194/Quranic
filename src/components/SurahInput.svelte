@@ -7,7 +7,6 @@
 		console.log('Search query:', searchQuery);
 		dispatch('search', { query: searchQuery });
 	}
-	
 </script>
 
 <main class="hero font-serif my-10">
@@ -15,7 +14,7 @@
 		<div class="join">
 			<input
 				type="text"
-				class="join-item input input-bordered max-w-xs"
+				class="join-item input input-bordered max-w-xs focus:shadow-lg"
 				placeholder="Search a Surah"
 				bind:value={searchQuery}
 				on:input={handleInput}

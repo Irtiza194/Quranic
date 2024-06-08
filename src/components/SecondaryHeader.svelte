@@ -1,6 +1,6 @@
 <header class="navbar gap-5 px-5 py-5 bg-base-300 shadow-md">
 	<div class="navbar-start">
-		<h1 class="text-3xl cursor-default max-md:text-2xl">Quranic</h1>
+		<h1 class="text-3xl cursor-default font-serif max-md:text-2xl">Quranic</h1>
 	</div>
 	<div class="navbar-end">
 		<div class="dropdown dropdown-end">

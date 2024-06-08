@@ -7,7 +7,6 @@
 	</p>
 	<p class="w-[70%] mt-2">
 		We're working hard to implement more and more updates, these include:
-		<li class="mt-2">More themes.</li>
 		<li>Quran in different languages.</li>
 		<li>Recitations of the Quran.</li>
 		<li class="mb-2">Search a specific Ayah.</li>
