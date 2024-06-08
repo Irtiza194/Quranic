@@ -19,7 +19,7 @@
 				bind:value={searchQuery}
 				on:input={handleInput}
 			/>
-			<button type="button" class="join-item btn btn-primary rounded-r-full" on:click={handleInput}
+			<button type="button" class="join-item btn btn-primary " on:click={handleInput}
 				><i class="ri-search-line"></i>Search</button
 			>
 		</div>

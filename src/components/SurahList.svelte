@@ -66,12 +66,9 @@
 <section class="hero">
 	{#if !selectedSurah}
 		<div class="hero-content grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-			<!-- svelte-ignore a11y-click-events-have-key-events -->
-			<!-- svelte-ignore a11y-no-static-element-interactions -->
 			{#each filteredSurahs as surah}
-				<!-- svelte-ignore a11y-click-events-have-key-events -->
 				<div
-					class="p-4 border-[1px] text-center border-neutral-400 hover:bg-base-100 hover:shadow-lg duration-300 cursor-pointer"
+					class="p-4 border-[1px] text-center border-neutral-400 rounded hover:bg-base-100 hover:shadow-lg duration-300 cursor-pointer"
 					on:click={() => fetchVerses(surah)}
 				>
 					<h2 class="text-lg text-center max-md:text-base max-sm:text-sm">
@@ -85,20 +82,24 @@
 		</div>
 	{:else}
 		<div class="mt-8">
-			<button class="btn btn-error mb-4 floating-button focus:scale-[-5em]" on:click={goBack}>
+			<button class="btn btn-error mb-4 floating-button" on:click={goBack}>
 				<i class="ri-arrow-go-back-line mr-2"></i>Go Back
 			</button>
 			<h3 class="text-2xl font-bold mb-4 px-20 surahFont max-sm:px-5">
 				{selectedSurah.name_simple} (Chapter {selectedSurah.id})
 			</h3>
-
+			<h4 class="text-xl font-bold mb-4 px-20 surahFont text-gray-600 max-sm:px-5">
+				{selectedSurah.name_arabic}
+			</h4>
 			<ul class="list-decimal ml-4 px-20 max-sm:px-5">
 				{#each verses as verse}
 					<li class="mb-2">
-						<p class="text-lg surahfont">{verse.arabic}</p>
+						<p class="text-lg surahFont">{verse.arabic}</p>
 						<p class="text-md">{verse.english}</p>
 					</li>
-					<div class="divider"></div>
+					{#if verse.number !== verses[verses.length - 1].number}
+						<div class="divider"></div>
+					{/if}
 				{/each}
 			</ul>
 		</div>
