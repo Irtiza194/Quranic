@@ -32,11 +32,6 @@ html {
 	margin-left: 1rem;
 	margin-right: 1rem;
 }
-
-#header {
-	will-change: transform;
-}
-
 .arabicFont {
 	font-family: 'Noto Naskh Arabic', serif;
 	font-optical-sizing: auto;

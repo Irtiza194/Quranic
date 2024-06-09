@@ -68,11 +68,7 @@
 </script>
 
 <section class="hero overflow-hidden">
-	{#if loading}
-		<div class="flex justify-center items-center h-screen">
-			<button class="btn btn-square loading"></button>
-		</div>
-	{:else if !selectedSurah}
+	{#if !selectedSurah}
 		<div id="surahList" class="hero-content grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
 			<!-- svelte-ignore a11y-click-events-have-key-events -->
 			{#each filteredSurahs as surah}
