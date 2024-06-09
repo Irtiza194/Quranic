@@ -19,8 +19,10 @@
 				bind:value={searchQuery}
 				on:input={handleInput}
 			/>
-			<button type="button" class="join-item btn btn-primary " on:click={handleInput}
-				><i class="ri-search-line"></i>Search</button
+			<button
+				type="button"
+				class="join-item btn btn-primary hover:shadow-2xl"
+				on:click={handleInput}><i class="ri-search-line"></i>Search</button
 			>
 		</div>
 	</div>

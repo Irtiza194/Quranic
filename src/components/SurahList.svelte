@@ -6,6 +6,7 @@
 	let filteredSurahs = [];
 	let verses = [];
 	let selectedSurah = null;
+	let loading = false;
 
 	onMount(async () => {
 		try {
@@ -36,6 +37,7 @@
 
 	async function fetchVerses(surah) {
 		try {
+			loading = true;
 			const response = await fetch(
 				`https://api.alquran.cloud/v1/surah/${surah.id}/editions/quran-uthmani,en.sahih`
 			);
@@ -51,8 +53,10 @@
 			}));
 
 			selectedSurah = surah;
+			loading = false;
 		} catch (error) {
 			console.error('Error fetching verses:', error);
+			loading = false;
 		}
 	}
 
@@ -64,14 +68,18 @@
 </script>
 
 <section class="hero overflow-hidden">
-	{#if !selectedSurah}
+	{#if loading}
+		<div class="flex justify-center items-center h-screen">
+			<button class="btn btn-square loading"></button>
+		</div>
+	{:else if !selectedSurah}
 		<div id="surahList" class="hero-content grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
 			<!-- svelte-ignore a11y-click-events-have-key-events -->
 			{#each filteredSurahs as surah}
 				<!-- svelte-ignore a11y-click-events-have-key-events -->
 				<!-- svelte-ignore a11y-no-static-element-interactions -->
 				<div
-					class="p-4 border-[1px] text-center border-neutral-400 rounded hover:bg-base-100 hover:shadow-lg duration-300 cursor-pointer"
+					class="p-4 border-[1px] text-center border-neutral-400 hover:bg-base-100 hover:shadow-2xl duration-300 cursor-pointer"
 					on:click={() => fetchVerses(surah)}
 				>
 					<h2 class="text-lg text-center max-md:text-base max-sm:text-sm">
@@ -98,8 +106,8 @@
 				<ul class="list-decimal ml-4 px-20 max-sm:px-5">
 					{#each verses as verse}
 						<li class="mb-2">
-							<p class="font text-2xl">{verse.arabic}</p>
-							<p class="mb-10">{verse.english}</p>
+							<p class="text-2xl text-right">{verse.arabic}</p>
+							<p class="mb-10 mt-5">{verse.english}</p>
 							<div class="divider"></div>
 						</li>
 					{/each}
