@@ -79,7 +79,7 @@
 				<!-- svelte-ignore a11y-click-events-have-key-events -->
 				<!-- svelte-ignore a11y-no-static-element-interactions -->
 				<div
-					class="p-4 border-[1px] text-center border-neutral-400 hover:bg-base-100 hover:shadow-2xl duration-300 cursor-pointer"
+					class="p-4 border-[1px] text-center border-neutral-400 hover:bg-base-100 hover:shadow-lg duration-300 cursor-pointer"
 					on:click={() => fetchVerses(surah)}
 				>
 					<h2 class="text-lg text-center max-md:text-base max-sm:text-sm">
@@ -96,23 +96,24 @@
 			<button class="btn btn-error mb-4 floating-button" on:click={goBack}>
 				<i class="ri-arrow-go-back-line mr-2"></i>Go Back
 			</button>
-			<h3 class="text-2xl font-bold mb-4 px-20 surahFont max-sm:px-5">
-				{selectedSurah.name_simple} (Chapter {selectedSurah.id})
-			</h3>
-			<h4 class="text-xl font-bold mb-4 px-20 surahFont text-gray-600 max-sm:px-5">
-				{selectedSurah.name_arabic}
-			</h4>
-			<div class="surah-container">
-				<ul class="list-decimal ml-4 px-20 max-sm:px-5">
+			<div class="fixed top-0 left-0 right-0 bg-base-300 py-4 z-10 shadow-md">
+				<h3 class="text-2xl font-bold mb-2 px-20 surahFont max-sm:px-5">
+					{selectedSurah.name_simple} (Chapter {selectedSurah.id})
+				</h3>
+				<h4 class="text-xl font-bold px-20 surahFont text-gray-600 max-sm:px-5">
+					{selectedSurah.name_arabic}
+				</h4>
+			</div>
+			<div class="mt-24 h-[calc(100vh-6rem)] overflow-auto px-20 max-sm:px-5 surah-container">
+				<ul class="list-decimal ml-4">
 					{#each verses as verse}
 						<li class="mb-2">
-							<p class="text-2xl text-right">{verse.arabic}</p>
-							<p class="mb-10 mt-5">{verse.english}</p>
+							<p class="text-2xl text-right arabicFont">{verse.arabic}</p>
+							<p class="mb-10 mt-9">{verse.english}</p>
 							<div class="divider"></div>
 						</li>
 					{/each}
 				</ul>
-				<div class="divider"></div>
 			</div>
 		</div>
 	{/if}

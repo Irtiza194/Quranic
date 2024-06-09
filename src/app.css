@@ -27,7 +27,19 @@ html {
 
 .surah-container {
 	max-height: 70vh;
+	/* position: relative; */
 	overflow-y: auto;
-	padding-right: 1rem;
-	margin-right: -1rem;
+	margin-left: 1rem;
+	margin-right: 1rem;
+}
+
+#header {
+	will-change: transform;
+}
+
+.arabicFont {
+	font-family: 'Noto Naskh Arabic', serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
 }
