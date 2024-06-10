@@ -40,6 +40,16 @@
 				type="radio"
 				name="theme-buttons"
 				class="btn theme-controller btn-wide hover:shadow-lg"
+				aria-label="Dark"
+				value="dark"
+				on:change={changeTheme}
+			/>
+		</div>
+		<div class="w-fit h-fit">
+			<input
+				type="radio"
+				name="theme-buttons"
+				class="btn theme-controller btn-wide hover:shadow-lg"
 				aria-label="Light"
 				value="light"
 				on:change={changeTheme}
