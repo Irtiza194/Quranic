@@ -28,7 +28,7 @@ html {
 .surah-container {
 	margin-left: 5rem;
 	margin-right: 5rem;
-	margin-top: 10em;
+	margin-top: 11em;
 }
 .arabicFont {
 	font-family: 'Noto Naskh Arabic', serif;
@@ -40,6 +40,6 @@ html {
 	.surah-container {
 		margin-left: 2rem;
 		margin-right: 2rem;
-		margin-top: 10em;
+		margin-top: 16em;
 	}
 }
