@@ -70,6 +70,16 @@
 				type="radio"
 				name="theme-buttons"
 				class="btn theme-controller btn-wide hover:shadow-lg"
+				aria-label="CyberPunk"
+				value="cyberpunk"
+				on:change={changeTheme}
+			/>
+		</div>
+		<div class="w-fit h-fit">
+			<input
+				type="radio"
+				name="theme-buttons"
+				class="btn theme-controller btn-wide hover:shadow-lg"
 				aria-label="Forest"
 				value="forest"
 				on:change={changeTheme}

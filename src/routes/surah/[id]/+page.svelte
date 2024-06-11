@@ -9,13 +9,11 @@
 	let verses = [];
 	let loading = false;
 
-	// Extract surahId from the page URL
 	$: surahId = get(page).params.id;
 
 	onMount(() => {
 		fetchSurahData(surahId);
 
-		// Listen for changes in the URL and fetch new data
 		page.subscribe((value) => {
 			if (value.params.id !== surahId) {
 				surahId = value.params.id;
