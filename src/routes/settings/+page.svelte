@@ -22,10 +22,8 @@
 	<h1 class="text-7xl font-bold font-serif max-md:text-4xl max-sm:text-center">Settings</h1>
 	<div class="divider"></div>
 	<h1 class="text-3xl font max-sm:text-center"><i class="ri-palette-line mr-4"></i>Themes</h1>
-	<div
-		class="grid grid-cols-3 mt-5 gap-2 max-lg:grid-cols-2 max-sm:grid-cols-1 max-sm:place-items-center"
-	>
-		<div class="w-fit h-fit">
+	<div class="grid grid-cols-[repeat(auto-fill,minmax(16rem,1fr))] mt-5 gap-2">
+		<div class="">
 			<input
 				type="radio"
 				name="theme-buttons"
@@ -35,7 +33,7 @@
 				on:change={changeTheme}
 			/>
 		</div>
-		<div class="w-fit h-fit">
+		<div class="">
 			<input
 				type="radio"
 				name="theme-buttons"
@@ -45,7 +43,7 @@
 				on:change={changeTheme}
 			/>
 		</div>
-		<div class="w-fit h-fit">
+		<div class="">
 			<input
 				type="radio"
 				name="theme-buttons"
@@ -55,7 +53,7 @@
 				on:change={changeTheme}
 			/>
 		</div>
-		<div class="w-fit h-fit">
+		<div class="">
 			<input
 				type="radio"
 				name="theme-buttons"
@@ -65,7 +63,7 @@
 				on:change={changeTheme}
 			/>
 		</div>
-		<div class="w-fit h-fit">
+		<div class="">
 			<input
 				type="radio"
 				name="theme-buttons"
@@ -75,7 +73,7 @@
 				on:change={changeTheme}
 			/>
 		</div>
-		<div class="w-fit h-fit">
+		<div class="">
 			<input
 				type="radio"
 				name="theme-buttons"
@@ -85,7 +83,7 @@
 				on:change={changeTheme}
 			/>
 		</div>
-		<div class="w-fit h-fit">
+		<div class="">
 			<input
 				type="radio"
 				name="theme-buttons"
@@ -95,7 +93,7 @@
 				on:change={changeTheme}
 			/>
 		</div>
-		<div class="w-fit h-fit">
+		<div class="">
 			<input
 				type="radio"
 				name="theme-buttons"
@@ -105,7 +103,7 @@
 				on:change={changeTheme}
 			/>
 		</div>
-		<div class="w-fit h-fit">
+		<div class="">
 			<input
 				type="radio"
 				name="theme-buttons"
@@ -115,7 +113,7 @@
 				on:change={changeTheme}
 			/>
 		</div>
-		<div class="w-fit h-fit">
+		<div class="">
 			<input
 				type="radio"
 				name="theme-buttons"
@@ -125,7 +123,7 @@
 				on:change={changeTheme}
 			/>
 		</div>
-		<div class="w-fit h-fit">
+		<div class="">
 			<input
 				type="radio"
 				name="theme-buttons"
@@ -135,7 +133,7 @@
 				on:change={changeTheme}
 			/>
 		</div>
-		<div class="w-fit h-fit">
+		<div class="">
 			<input
 				type="radio"
 				name="theme-buttons"
@@ -145,7 +143,7 @@
 				on:change={changeTheme}
 			/>
 		</div>
-		<div class="w-fit h-fit">
+		<div class="">
 			<input
 				type="radio"
 				name="theme-buttons"
@@ -155,7 +153,7 @@
 				on:change={changeTheme}
 			/>
 		</div>
-		<div class="w-fit h-fit">
+		<div class="">
 			<input
 				type="radio"
 				name="theme-buttons"
@@ -165,7 +163,7 @@
 				on:change={changeTheme}
 			/>
 		</div>
-		<div class="w-fit h-fit">
+		<div class="">
 			<input
 				type="radio"
 				name="theme-buttons"
@@ -175,7 +173,7 @@
 				on:change={changeTheme}
 			/>
 		</div>
-		<div class="w-fit h-fit">
+		<div class="">
 			<input
 				type="radio"
 				name="theme-buttons"
@@ -185,7 +183,7 @@
 				on:change={changeTheme}
 			/>
 		</div>
-		<div class="w-fit h-fit">
+		<div class="">
 			<input
 				type="radio"
 				name="theme-buttons"
@@ -195,7 +193,7 @@
 				on:change={changeTheme}
 			/>
 		</div>
-		<div class="w-fit h-fit">
+		<div class="">
 			<input
 				type="radio"
 				name="theme-buttons"
@@ -205,7 +203,7 @@
 				on:change={changeTheme}
 			/>
 		</div>
-		<div class="w-fit h-fit">
+		<div class="">
 			<input
 				type="radio"
 				name="theme-buttons"
