@@ -15,6 +15,7 @@
 				<li><a href="/"><i class="ri-home-line"></i>Home</a></li>
 				<li><a href="#about"><i class="ri-question-line"></i>About Us</a></li>
 				<li><a href="#updates"><i class="ri-refresh-line"></i>Updates</a></li>
+				<li><a href="/player"><i class="ri-headphone-line"></i>Player</a></li>
 				<li><a href="/settings"><i class="ri-settings-line"></i>Settings</a></li>
 			</ul>
 		</div>
