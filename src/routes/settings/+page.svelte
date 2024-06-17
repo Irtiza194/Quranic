@@ -10,7 +10,6 @@
 <SecondaryHeader></SecondaryHeader>
 <SettingsContainer>
 	<Themes></Themes>
-	<Languages></Languages>
 	<Reports></Reports>
 	<Ideas></Ideas>
 </SettingsContainer>
