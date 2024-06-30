@@ -4,7 +4,6 @@
 	import Themes from '../../components/Themes.svelte';
 	import Ideas from '../../components/Ideas.svelte';
 	import SettingsContainer from '../../components/SettingsContainer.svelte';
-	import Languages from '../../components/Languages.svelte';
 </script>
 
 <SecondaryHeader></SecondaryHeader>
