@@ -1,6 +1,5 @@
-<div class="divider mx-10"></div>
-<div class="h-auto w-auto px-10" id="about">
-	<div class="max-w-md p-3">
+<div class="h-auto w-auto border-t p-10" id="about">
+	<div class="p-3 text-center">
 		<h1 class="text-7xl max-md:text-4xl max-sm:text-3xl">السلام عليكم</h1>
 		<p class="mt-5">
 			Quranic is a website, it aims to make it easy for anyone to read, study, and learn the Quran.

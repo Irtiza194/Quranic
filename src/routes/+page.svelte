@@ -3,6 +3,7 @@
 	import Header from '../components/Header.svelte';
 	import SurahList from '../components/SurahList.svelte';
 	import About from '../components/About.svelte';
+	import { Button } from '$lib/components/ui/button/index.js';
 	let searchQuery = '';
 
 	function handleSearch(event) {
@@ -18,6 +19,6 @@
 <SurahInput on:search={handleSearch}></SurahInput>
 <SurahList {searchQuery}></SurahList>
 <About></About>
-<button type="button" class="btn btn-primary mr-10 mb-10 float-end" on:click={goToTop}>
+<Button variant="outline" size="icon" class="float-end mb-10 mr-10" on:click={goToTop}>
 	<i class="ri-arrow-up-line"></i>
-</button>
+</Button>

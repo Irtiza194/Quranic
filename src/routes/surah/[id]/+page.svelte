@@ -3,6 +3,7 @@
 	import { page } from '$app/stores';
 	import { goto } from '$app/navigation';
 	import { get } from 'svelte/store';
+	import Button from '$lib/components/ui/button/button.svelte';
 
 	let surahId;
 	let surah = null;
@@ -73,19 +74,18 @@
 	}
 </script>
 
-<section class="mt-8">
+<section class="mt-8 px-4">
 	{#if loading}
 		<div class="flex justify-center items-center h-screen flex-col">
-			<span class="loading loading-spinner loading-md"></span>
 			<h1 class="mt-3">Loading, please wait...</h1>
 		</div>
 	{:else if surah}
 		<div class="mt-8">
 			<div
-				class="fixed max-md:text-center top-0 left-0 right-0 bg-base-300 py-4 z-10 shadow-md flex flex-col md:flex-row items-center justify-between px-4 md:px-20"
+				class="border-b max-md:text-center top-0 left-0 right-0 py-4 flex flex-col md:flex-row items-center justify-between px-4 md:px-20"
 			>
 				<div>
-					<h3 class="text-2xl font-bold mb-2 surahFont">
+					<h3 class="text-2xl font-bold mb-2 max-sm:text-xl">
 						{surah.name_simple} (Chapter {surah.id})
 					</h3>
 					<h4 class="text-xl font-bold surahFont text-gray-600">
@@ -94,31 +94,26 @@
 					<p class="text-lg text-gray-500">{surah.translated_name.name}</p>
 				</div>
 				<div class="flex space-x-2 max-md:mt-3 md:space-x-4">
-					<button
-						class="btn btn-primary hover:shadow-2xl mb-4"
-						on:click={goToPreviousSurah}
-						disabled={surah.id == 1}
-					>
+					<Button class="mb-4" on:click={goToPreviousSurah} disabled={surah.id == 1}>
 						<i class="ri-arrow-left-line mr-1"></i>
 						<span class="hidden md:inline">Previous Surah</span>
-					</button>
-					<button class="btn btn-primary hover:shadow-2xl mb-4" on:click={goToNextSurah}>
+					</Button>
+					<Button class="mb-4" on:click={goToNextSurah} disabled={surah.id == 114}>
 						<span class="hidden md:inline">Next Surah</span>
 						<i class="ri-arrow-right-line ml-1"></i>
-					</button>
-					<button class="btn btn-error mb-4 hover:shadow-2xl" on:click={goBack}>
+					</Button>
+					<Button variant="destructive" class="mb-4" on:click={goBack}>
 						<i class="ri-arrow-go-back-line mr-1"></i>
 						<span class="hidden md:inline">Go Back</span>
-					</button>
+					</Button>
 				</div>
 			</div>
 			<div class="surah-container">
-				<ul class="list-decimal">
+				<ul class="list-decimal px-20 max-md:px-10 max-sm:px-5">
 					{#each verses as verse}
-						<li class="mb-2 mt-9">
-							<p class="text-3xl text-right arabicFont">{verse.arabic}</p>
+						<li class="mb-2 mt-9 border-b px-">
+							<p class="text-3xl text-right max-sm:text-2xl">{verse.arabic}</p>
 							<p class="mb-10 mt-9">{verse.english}</p>
-							<div class="divider"></div>
 						</li>
 					{/each}
 				</ul>

@@ -1,5 +1,4 @@
-<div class="divider"></div>
-<h1 class="font text-3xl max-sm:text-center">
+<h1 class="font text-3xl border-t max-sm:text-center">
 	<i class="ri-bug-2-line mr-4"></i>Report and Bugs
 </h1>
 <p class="mt-5 max-sm:text-center">

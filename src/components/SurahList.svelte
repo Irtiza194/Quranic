@@ -39,14 +39,17 @@
 	}
 </script>
 
-<section class="hero overflow-hidden">
-	<div id="surahList" class="hero-content grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+<section class="overflow-hidden mt-5 mb-5">
+	<div
+		id="surahList"
+		class="px-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
+	>
 		<!-- svelte-ignore a11y-click-events-have-key-events -->
 		{#each filteredSurahs as surah}
 			<!-- svelte-ignore a11y-click-events-have-key-events -->
 			<!-- svelte-ignore a11y-no-static-element-interactions -->
 			<div
-				class="p-4 border-[1px] text-center border-neutral-400 hover:bg-base-100 hover:shadow-lg duration-300 cursor-pointer"
+				class="p-4 border text-center hover:bg-base-100 hover:shadow-lg duration-300 cursor-pointer"
 				on:click={() => navigateToSurah(surah)}
 			>
 				<h2 class="text-lg text-center max-md:text-base max-sm:text-sm">
