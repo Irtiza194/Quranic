@@ -112,7 +112,7 @@
 				<ul class="list-decimal px-20 max-md:px-10 max-sm:px-5">
 					{#each verses as verse}
 						<li class="mb-2 mt-9 border-b px-">
-							<p class="text-3xl text-right max-sm:text-2xl">{verse.arabic}</p>
+							<p class="arabicFont text-3xl text-right max-sm:text-2xl">{verse.arabic}</p>
 							<p class="mb-10 mt-9">{verse.english}</p>
 						</li>
 					{/each}

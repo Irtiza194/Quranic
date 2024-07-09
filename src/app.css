@@ -7,6 +7,12 @@ body {
 	scroll-behavior: smooth;
 }
 
+.arabicFont {
+	font-family: 'Noto Naskh Arabic', serif;
+	font-optical-sizing: auto;
+	font-style: normal;
+}
+
 @layer base {
 	:root {
 		--background: 0 0% 100%;

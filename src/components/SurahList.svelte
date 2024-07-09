@@ -1,11 +1,11 @@
 <script>
 	import { onMount } from 'svelte';
 	import { goto } from '$app/navigation';
+	import * as Card from '$lib/components/ui/card';
 
 	export let searchQuery = '';
 	let surahs = [];
 	let filteredSurahs = [];
-	let loading = false;
 
 	onMount(async () => {
 		try {
@@ -42,22 +42,20 @@
 <section class="overflow-hidden mt-5 mb-5">
 	<div
 		id="surahList"
-		class="px-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
+		class="mx-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
 	>
-		<!-- svelte-ignore a11y-click-events-have-key-events -->
 		{#each filteredSurahs as surah}
 			<!-- svelte-ignore a11y-click-events-have-key-events -->
 			<!-- svelte-ignore a11y-no-static-element-interactions -->
-			<div
-				class="p-4 border text-center hover:bg-base-100 hover:shadow-lg duration-300 cursor-pointer"
-				on:click={() => navigateToSurah(surah)}
-			>
-				<h2 class="text-lg text-center max-md:text-base max-sm:text-sm">
-					{surah.name_simple}
-				</h2>
-				<h3 class="text-lg surahFont text-gray-600 max-md:text-base max-sm:text-sm">
-					{surah.name_arabic}
-				</h3>
+			<div on:click={() => navigateToSurah(surah)} class="">
+				<Card.Root
+					class="hover:bg-neutral-300 dark:hover:bg-slate-900 hover:shadow-lg duration-300 cursor-pointer"
+				>
+					<Card.Header class="flex justify-around items-center flex-row">
+						<Card.Title>{surah.name_simple}</Card.Title>
+						<p class="arabicFont">{surah.name_arabic}</p>
+					</Card.Header>
+				</Card.Root>
 			</div>
 		{/each}
 	</div>
