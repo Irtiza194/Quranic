@@ -82,7 +82,7 @@
 	{:else if surah}
 		<div class="mt-8">
 			<div
-				class="border-b max-md:text-center top-0 left-0 right-0 py-4 flex flex-col md:flex-row items-center justify-between px-4 md:px-20"
+				class="sticky top-0 border-b max-md:text-center left-0 right-0 py-4 flex flex-col md:flex-row items-center justify-between px-4 md:px-20 backdrop-blur"
 			>
 				<div>
 					<h3 class="text-2xl font-bold mb-2 max-sm:text-xl">
