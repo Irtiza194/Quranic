@@ -39,21 +39,28 @@
 	}
 </script>
 
-<section class="overflow-hidden mt-5 mb-5">
+<section class="overflow-hidden my-10">
 	<div
 		id="surahList"
-		class="mx-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
+		class="mx-4 sm:mx-6 md:mx-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
 	>
 		{#each filteredSurahs as surah}
 			<!-- svelte-ignore a11y-click-events-have-key-events -->
 			<!-- svelte-ignore a11y-no-static-element-interactions -->
 			<div on:click={() => navigateToSurah(surah)} class="">
 				<Card.Root
-					class="hover:bg-neutral-300 dark:hover:bg-slate-900 hover:shadow-lg duration-300 cursor-pointer"
+					class="hover:shadow-lg transition-transform duration-300 cursor-pointer hover:scale-105"
 				>
-					<Card.Header class="flex justify-around items-center flex-row">
-						<Card.Title>{surah.name_simple}</Card.Title>
-						<p class="arabicFont">{surah.name_arabic}</p>
+					<Card.Header>
+						<div class="flex justify-between items-center">
+							<div class="flex flex-col">
+								<Card.Title class="font-semibold">{surah.name_simple}</Card.Title>
+								<p class="text-gray-600">{surah.translated_name.name}</p>
+							</div>
+							<div class="">
+								<p class="arabicFont text-lg">{surah.name_arabic}</p>
+							</div>
+						</div>
 					</Card.Header>
 				</Card.Root>
 			</div>

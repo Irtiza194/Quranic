@@ -4,6 +4,7 @@
 	import { goto } from '$app/navigation';
 	import { get } from 'svelte/store';
 	import Button from '$lib/components/ui/button/button.svelte';
+	import Separator from '$lib/components/ui/separator/separator.svelte';
 
 	let surahId;
 	let surah = null;
@@ -82,7 +83,7 @@
 	{:else if surah}
 		<div class="mt-8">
 			<div
-				class="sticky top-0 border-b max-md:text-center left-0 right-0 py-4 flex flex-col md:flex-row items-center justify-between px-4 md:px-20 backdrop-blur"
+				class="sticky top-0 border-b max-md:text-center py-4 flex flex-col md:flex-row items-center justify-between px-4 md:px-20 backdrop-blur"
 			>
 				<div>
 					<h3 class="text-2xl font-bold mb-2 max-sm:text-xl">
@@ -108,13 +109,15 @@
 					</Button>
 				</div>
 			</div>
+
 			<div class="surah-container">
-				<ul class="list-decimal px-20 max-md:px-10 max-sm:px-5">
+				<ul class="">
 					{#each verses as verse}
-						<li class="mb-2 mt-9 border-b px-">
+						<li class="mb-2 mt-9 px-20 max-md:px-10 max-sm:px-5">
 							<p class="arabicFont text-3xl text-right max-sm:text-2xl">{verse.arabic}</p>
 							<p class="mb-10 mt-9">{verse.english}</p>
 						</li>
+						<Separator></Separator>
 					{/each}
 				</ul>
 			</div>
