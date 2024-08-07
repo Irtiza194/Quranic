@@ -25,10 +25,6 @@ You can view a live demo of the project [here](https://quranic-v2.netlify.app/).
 
 We welcome contributions from the community! Feel free to open issues for bug reports or feature requests, and submit pull requests for improvements.
 
-### License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
-
 ## Contact
 
 If you have any questions or feedback, please reach out to us at [aliirtiza44@gmail.com].
